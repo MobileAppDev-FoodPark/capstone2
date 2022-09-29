@@ -39,9 +39,6 @@ class SplashPage extends StatelessWidget {
         alignment: Alignment.center,
         child: Logo(),
       ),
-
-//home: SignupView(
-//title: 'Food park',
     );
   }
 }
