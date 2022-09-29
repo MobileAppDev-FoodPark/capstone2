@@ -18,7 +18,7 @@ class WelcomePage extends StatelessWidget {
           children: [
             Positioned.fill(
               child: Opacity(
-                opacity: 0.2,
+                opacity: 0.6,
                 child: Image.asset('images/yellowBg.png', fit: BoxFit.cover),
               ),
             ),
