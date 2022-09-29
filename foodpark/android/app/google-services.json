@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "155505566855",
+    "project_id": "foodpark-setup",
+    "storage_bucket": "foodpark-setup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155505566855:android:fe8b19508e04837f0ac422",
+        "android_client_info": {
+          "package_name": "com.example.foodpark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155505566855-vq16ata5s6cijm3hi83gq8skdespar05.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzK__AabbW6ieX08R-wTBaNCU7U3lmW1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155505566855-vq16ata5s6cijm3hi83gq8skdespar05.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
