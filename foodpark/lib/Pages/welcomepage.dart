@@ -1,14 +1,14 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:ui';
-
-import 'package:firebase_core/firebase_core.dart';
+//import 'package:firebase_core/firebase_core.dart';
 import 'package:foodpark/Pages/login_page.dart';
-import 'package:foodpark/Pages/sign_up.dart';
+//import 'package:foodpark/Pages/sign_up.dart';
 import 'package:flutter/material.dart';
-import 'package:foodpark/helpers/AppColors.dart';
+import 'package:foodpark/helpers/app_colors.dart';
 
 class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +53,8 @@ class WelcomePage extends StatelessWidget {
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          splashColor: AppColors.DARKER_SHADE.withOpacity(0.2),
-                          highlightColor: AppColors.CYAN.withOpacity(0.2),
+                          splashColor: Appcolors.darkershade.withOpacity(0.2),
+                          highlightColor: Appcolors.cyan.withOpacity(0.2),
                           onTap: () {
                             Navigator.push(
                                 context,
@@ -65,6 +65,11 @@ class WelcomePage extends StatelessWidget {
                           },
                           child: Container(
                               padding: EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  color: Colors.transparent,
+                                  border: Border.all(
+                                      color: Appcolors.darkershade, width: 4)),
                               child: Text(
                                 'Log In',
                                 textAlign: TextAlign.center,
@@ -72,13 +77,7 @@ class WelcomePage extends StatelessWidget {
                                     fontSize: 20,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
-                              ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  color: Colors.transparent,
-                                  border: Border.all(
-                                      color: AppColors.DARKER_SHADE,
-                                      width: 4))),
+                              )),
                         ),
                       ),
                     ),

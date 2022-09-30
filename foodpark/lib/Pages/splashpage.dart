@@ -1,7 +1,7 @@
-import 'dart:ui';
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, unnecessary_this
 
-import 'package:firebase_core/firebase_core.dart';
-import 'package:foodpark/Pages/sign_up.dart';
+//import 'package:firebase_core/firebase_core.dart';
+//import 'package:foodpark/Pages/sign_up.dart';
 import 'package:foodpark/widgets/iconlogo.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +22,7 @@ class SplashPage extends StatelessWidget {
       body: Container(
         color: Colors.white,
         alignment: Alignment.center,
-        child: Logo(),
+        child: const Logo(),
       ),
 
 //home: SignupView(
