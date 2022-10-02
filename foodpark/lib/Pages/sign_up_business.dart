@@ -39,7 +39,7 @@ class BusinessAccount extends StatelessWidget {
                 ),
 
                 SizedBox(
-                  height: 30,
+                  height: 60,
                 ),
 
                 //Username text
