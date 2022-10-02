@@ -5,12 +5,15 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      'a', //icon font from fontastic
-      style: TextStyle(
-          color: Colors.cyanAccent,
-          fontSize: 100,
-          fontFamily: 'untitled-font-1'),
-    );
+    return Scaffold(
+        body: Container(
+      color: Colors.black,
+      child: Stack(
+        children: [
+          Positioned.fill(
+              child: Image.asset('images/splash_page.png', fit: BoxFit.cover)),
+        ],
+      ),
+    ));
   }
 }

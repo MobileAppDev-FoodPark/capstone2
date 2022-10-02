@@ -15,7 +15,7 @@ import 'widgets/iconlogo.dart';
 void main() async {
   runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashPage(duration: 4, goToPage: WelcomePage())));
+      home: SplashPage(duration: 2, goToPage: WelcomePage())));
 }
 
 //logo that will appear on the splash page
