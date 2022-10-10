@@ -1,9 +1,8 @@
 // ignore_for_file: unused_import, prefer_const_constructors, use_key_in_widget_constructors, unnecessary_this
-
-//import 'dart:html';
 import 'dart:ui';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:foodpark/Pages/home_page.dart';
 import 'package:foodpark/Pages/sign_up.dart';
 import 'package:foodpark/Pages/welcomepage.dart';
 import 'Pages/login_page.dart';
@@ -13,9 +12,20 @@ import 'package:foodpark/helpers/app_colors.dart';
 import 'widgets/iconlogo.dart';
 
 void main() async {
-  runApp(MaterialApp(
+  runApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashPage(duration: 2, goToPage: WelcomePage())));
+      home: SplashPage(
+        duration: 4,
+        goToPage: WelcomePage(),
+      ),
+      routes: {
+        '/login/': (context) => const LoginPage(title: 'Food Park'),
+        '/signup/': (context) => const SignupView(title: 'Food Park'),
+        '/homepage/': (context) => const HomePage(title: 'Food Park'),
+      },
+    ),
+  );
 }
 
 //logo that will appear on the splash page
