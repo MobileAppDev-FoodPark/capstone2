@@ -28,12 +28,14 @@ class _SignupViewState extends State<SignupView> {
   late final TextEditingController _username;
   late final TextEditingController _email;
   late final TextEditingController _password;
+  late final TextEditingController _confipassword;
 
   @override
   void initState() {
     _username = TextEditingController();
     _email = TextEditingController();
     _password = TextEditingController();
+    _confipassword = TextEditingController();
     super.initState();
   }
 
@@ -42,6 +44,7 @@ class _SignupViewState extends State<SignupView> {
     _username.dispose();
     _email.dispose();
     _password.dispose();
+    _confipassword.dispose();
 
     super.dispose();
   }
@@ -166,6 +169,7 @@ class _SignupViewState extends State<SignupView> {
                               padding: const EdgeInsets.only(left: 20.0),
                               child: TextField(
                                 obscureText: true,
+                                controller: _confipassword,
                                 decoration: InputDecoration(
                                     hintText: 'Confirm-Password',
                                     icon: Icon(Icons.lock),
@@ -191,21 +195,24 @@ class _SignupViewState extends State<SignupView> {
                                 borderRadius: BorderRadius.circular(12)),
                             child: TextButton(
                               onPressed: () async {
-                                final email = _email.text;
-                                final password = _password.text;
-                                try {
-                                  final userCredential = await FirebaseAuth
-                                      .instance
-                                      .createUserWithEmailAndPassword(
-                                          email: email, password: password);
-                                  devtools.log(userCredential.toString());
-                                } on FirebaseAuthException catch (e) {
-                                  if (e.code == 'weak-password') {
-                                    devtools.log('weak password');
-                                  } else if (e.code == 'email-already-in-use') {
-                                    devtools.log('email-already-in-use');
-                                  } else if (e.code == 'invalid email') {
-                                    devtools.log('invalid email');
+                                if (passwordConfirmed()) {
+                                  final email = _email.text;
+                                  final password = _password.text;
+                                  try {
+                                    final userCredential = await FirebaseAuth
+                                        .instance
+                                        .createUserWithEmailAndPassword(
+                                            email: email, password: password);
+                                    devtools.log(userCredential.toString());
+                                  } on FirebaseAuthException catch (e) {
+                                    if (e.code == 'weak-password') {
+                                      devtools.log('weak password');
+                                    } else if (e.code ==
+                                        'email-already-in-use') {
+                                      devtools.log('email-already-in-use');
+                                    } else if (e.code == 'invalid email') {
+                                      devtools.log('invalid email');
+                                    }
                                   }
                                 }
                               },
@@ -231,5 +238,13 @@ class _SignupViewState extends State<SignupView> {
         ),
       ),
     );
+  }
+
+  bool passwordConfirmed() {
+    if (_password.text.trim() == _confipassword.text.trim()) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
