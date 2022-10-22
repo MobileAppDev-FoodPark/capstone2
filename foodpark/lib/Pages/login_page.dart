@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
 
                         SizedBox(
-                          height: 70,
+                          height: 50,
                         ),
 
                         //emal text

@@ -66,7 +66,7 @@ class _SignupViewState extends State<SignupView> {
                     child: Column(
                       children: [
                         SizedBox(
-                          height: 70,
+                          height: 20,
                         ),
 
                         Text(
@@ -79,12 +79,12 @@ class _SignupViewState extends State<SignupView> {
                         ),
 
                         SizedBox(
-                          height: 60,
+                          height: 20,
                         ),
 
                         //Username text
 
-                        Padding(
+                        /* Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
                             decoration: BoxDecoration(
@@ -105,7 +105,7 @@ class _SignupViewState extends State<SignupView> {
                             ),
                           ),
                         ),
-
+                        */
                         //Email text
 
                         Padding(
@@ -180,7 +180,7 @@ class _SignupViewState extends State<SignupView> {
                         ),
 
                         SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
 
                         //login button
