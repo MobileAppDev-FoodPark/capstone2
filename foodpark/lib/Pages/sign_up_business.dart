@@ -55,8 +55,8 @@ class BusinessAccount extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         decoration: InputDecoration(
-                            hintText: 'Username',
-                            icon: Icon(Icons.person),
+                            hintText: 'Business Name',
+                            icon: Icon(Icons.apartment),
                             border: InputBorder.none),
                       ),
                     ),
@@ -75,8 +75,8 @@ class BusinessAccount extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         decoration: InputDecoration(
-                            hintText: 'Business Name',
-                            icon: Icon(Icons.apartment),
+                            hintText: 'Business Address',
+                            icon: Icon(Icons.location_on_outlined),
                             border: InputBorder.none),
                       ),
                     ),
